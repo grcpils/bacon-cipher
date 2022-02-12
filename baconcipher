@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+
+import argparse
+import sys
+from classes.decode import Decode
+from classes.encode import Encode
+
+def main():
+  parser = argparse.ArgumentParser("baconcipher")
+  parser.add_argument("--encode", help="encode following string", type=str)
+  parser.add_argument("--decode", help="decode following string", type=str)
+  args = parser.parse_args()
+
+  if args.encode == None and args.decode == None:
+    parser.print_help()
+    return 0
+
+  if (args.encode != None):
+    encode = Encode(args.encode)
+    print(encode.get_encoded_str())
+
+  if (args.decode != None):
+    decode = Decode(args.decode)
+    print(decode.get_decoded_str())
+
+  return 0
+
+
+main()
