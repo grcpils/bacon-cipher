@@ -1,4 +1,4 @@
-from classes.cipher import Cipher
+from utils.cipher import Cipher
 
 class Encode(Cipher):
 
