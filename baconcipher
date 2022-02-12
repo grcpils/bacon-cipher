@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 
 import argparse
-import sys
-from classes.decode import Decode
-from classes.encode import Encode
+from utils.decode import Decode
+from utils.encode import Encode
 
 def main():
   parser = argparse.ArgumentParser("baconcipher")
